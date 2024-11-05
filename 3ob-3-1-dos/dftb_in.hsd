@@ -1,0 +1,66 @@
+Geometry = GenFormat {
+   <<< TpPa1-Out.gen
+}
+
+Driver = { }
+
+Hamiltonian = DFTB {
+SCC = Yes
+SCCTolerance = 1e-5
+ReadInitialCharges = Yes
+MaxSCCIterations = 1000
+ThirdOrderFull = Yes
+Dispersion = LennardJones {
+  Parameters = UFFParameters{} }
+HCorrection = Damping {
+  Exponent = 4.05 }
+HubbardDerivs {
+C = -0.1492
+H = -0.1857
+N = -0.1535
+O = -0.1575 }
+SlaterKosterFiles = Type2FileNames {
+  Prefix = "/project/design-lab/software/DFTB+/3ob-3-1/"
+  Separator = "-"
+  Suffix = ".skf" }
+KPointsAndWeights = SupercellFolding {
+  12 0 0
+  0 12 0
+  0 0 12
+  0.5 0.5 0.5 }
+MaxAngularMomentum {
+C = p
+H = s
+N = p
+O = p }
+Filling = Fermi {
+  Temperature [Kelvin] = 0 } }
+
+Parallel = {
+  Groups = 1
+  UseOmpThreads = Yes }
+
+ParserOptions {
+  ParserVersion = 14 }
+
+Analysis = {
+  MullikenAnalysis = Yes
+  ProjectStates {
+    Region {
+      Atoms = C
+      ShellResolved = Yes
+      Label = dos_C }
+    Region {
+      Atoms = H
+      ShellResolved = Yes
+      Label = dos_H }
+    Region {
+      Atoms = N
+      ShellResolved = Yes
+      Label = dos_N }
+    Region {
+      Atoms = O
+      ShellResolved = Yes
+      Label = dos_O }
+    }
+}
