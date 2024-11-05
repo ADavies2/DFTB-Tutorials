@@ -1,0 +1,1 @@
+# NPT ensemble molecular dynamics from minimized 3ob-3-1 TpPa-1
