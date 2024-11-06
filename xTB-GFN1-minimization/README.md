@@ -6,7 +6,7 @@ Both GFN1 and GFN2 are included in the the DFTB+ package and can be used to mini
 
 ## dftb_in.hsd
 
-- The primary difference between the 3ob-3-1 dftb_in.hsd file and the xTB-GFN1 calculation is the Hamiltonian block. In line 13, the Hamiltonian driver has been specified as xTB rather than DFTB. 
+- The primary difference between the 3ob-3-1 dftb_in.hsd file and the GFN1-xTB calculation is the Hamiltonian block. In line 13, the Hamiltonian driver has been specified as xTB rather than DFTB. 
     - In line 16, the specific xTB model is defined, either "GFN1-xTB" or "GFN2-xTB". 
 - It is noted here that dispersion corrections can still be applied with either of the xTB models. However, in this example, as UiO-66 is a 3D MOF, and for the sake of sped up calculations for the example, the dispersion corrections have been dropped. 
 
