@@ -14,7 +14,7 @@ An accompanying README.md is included in each of the tutorial sub-directories. [
 ## Installation
 
 1. Load the module for or install Conda/MiniConda
-2. <code>conda create dftbplus</code>
+2. <code>conda create -n dftbplus</code>
 3. <code>conda activate dftbplus</code>
 4. <code>conda install mamba</code>
 5. <code>mamba install 'dftbplus=\*=mpi_openmpi_\*'</code>
